@@ -2,5 +2,7 @@ using SimulationUtils
 using Test
 
 @testset "SimulationUtils.jl" begin
-    # Write your tests here.
+    include("bisection_search_tests.jl")
+    include("grad_desc_tests.jl")
+    include("OnDiskMonitor_tests.jl")
 end

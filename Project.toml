@@ -3,6 +3,12 @@ uuid = "d690c95a-5dbf-4f48-8541-cd6f672b0d00"
 authors = ["josePereiro <jose.pereiro.lab@gmail.com> and contributors"]
 version = "0.1.0"
 
+[deps]
+BSON = "fbb218c0-5317-5bc6-957e-2ee96dd4b1f0"
+ProgressMeter = "92933f4c-e287-5a05-a399-4b506db050ca"
+Serialization = "9e88b42a-f829-5b0c-bbe9-9e923198166b"
+Statistics = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
+
 [compat]
 julia = "1.5"
 
