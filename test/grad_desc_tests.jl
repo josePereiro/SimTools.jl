@@ -14,11 +14,11 @@ function test_grad_desc()
         maxiter = 50000
 
         function up_fun(gdmodel) 
-            xs = SimulationUtils.gd_value(gdmodel)
+            xs = SimTools.gd_value(gdmodel)
             xs .^ rexps
         end
 
-        gdmodel = SimulationUtils.grad_desc_vec(up_fun; 
+        gdmodel = SimTools.grad_desc_vec(up_fun; 
             target, x0, x1, minΔx, maxΔx, gdth, maxiter, 
         )
         @show gdmodel.ϵi
@@ -42,10 +42,10 @@ function test_grad_desc()
             gdth = 1e-5
 
             function up_fun(gdmodel) 
-                x = SimulationUtils.gd_value(gdmodel)
+                x = SimTools.gd_value(gdmodel)
                 x ^ rexp
             end
-            gdmodel = SimulationUtils.grad_desc(up_fun; 
+            gdmodel = SimTools.grad_desc(up_fun; 
                 target, x0, x1, maxΔx, gdth, maxiter
             )
             @show gdmodel.ϵi

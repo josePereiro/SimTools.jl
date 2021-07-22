@@ -15,6 +15,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Start the `CHANGELOG`
 
 <!-- LINKS -->
-[SimulationUtils]: https://github.com/josePereiro/SimulationUtils
-[0.0.1]: https://github.com/josePereiro/SimulationUtils/releases/tag/v0.0.1
+[SimTools]: https://github.com/josePereiro/SimTools.jl
+[0.0.1]: https://github.com/josePereiro/SimTools.jl/releases/tag/v0.0.1
 [UtilsJL]: https://github.com/josePereiro/UtilsJL/releases/tag/v0.8.3

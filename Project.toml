@@ -1,4 +1,4 @@
-name = "SimulationUtils"
+name = "SimTools"
 uuid = "d690c95a-5dbf-4f48-8541-cd6f672b0d00"
 authors = ["josePereiro <jose.pereiro.lab@gmail.com> and contributors"]
 version = "0.1.0"

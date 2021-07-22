@@ -1,4 +1,4 @@
-module SimulationUtils
+module SimTools
 
     import Statistics
     import BSON

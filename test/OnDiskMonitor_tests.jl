@@ -1,15 +1,15 @@
 function run_OnDiskMonitor_tests()
     n = 1000
-    m = SimulationUtils.OnDiskMonitor(@__DIR__, "monitor_test.jld2"; dt = 1.0)
-    SimulationUtils.reset!(m)
-    SimulationUtils.clear_file(m)
+    m = SimTools.OnDiskMonitor(@__DIR__, "monitor_test.jld2"; dt = 1.0)
+    SimTools.reset!(m)
+    SimTools.clear_file(m)
     @assert isempty(m.cache)
     @assert !isfile(m.file)
 
     # Watch task (It can be in another process)
     tests_results = []
     cvals = []
-    @async SimulationUtils.watch(m) do ddat
+    @async SimTools.watch(m) do ddat
         isempty(ddat) && return
         check = true
         dvals = ddat[:vals]
@@ -22,19 +22,19 @@ function run_OnDiskMonitor_tests()
     # Fake job to monitor
     for i in 1:n
         push!(cvals, i)
-        SimulationUtils.record!(m) do dat
+        SimTools.record!(m) do dat
             dat[:vals] = cvals
         end
         sleep(5.0/n)
     end
-    SimulationUtils.reset!(m)
+    SimTools.reset!(m)
     sleep(1.0)
     
     @test isempty(m.cache)
     @test length(cvals) == n
     @test all(tests_results)
 
-    SimulationUtils.clear_file(m)
+    SimTools.clear_file(m)
     @test !isfile(m.file)
 end
 run_OnDiskMonitor_tests()
