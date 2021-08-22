@@ -9,5 +9,6 @@ module SimTools
     include("gradient_descent.jl")
     include("is_stationary.jl")
     include("OnDiskMonitor.jl")
+    include("utils.jl")
 
 end
